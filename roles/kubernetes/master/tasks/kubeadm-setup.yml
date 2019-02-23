@@ -63,7 +63,7 @@
       {% endif %}
       {{ hostvars[host]['ip'] | default(hostvars[host]['ansible_default_ipv4']['address']) }}
       {%- endfor %}
-      {%- if supplementary_addresses_in_ssl_keys is defined -%}
+      {%- if supplementary_addresses_in_ssl_keys is defined %}
       {% for addr in supplementary_addresses_in_ssl_keys %}
       {{ addr }}
       {%- endfor %}
